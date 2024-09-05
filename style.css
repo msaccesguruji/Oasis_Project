@@ -1,0 +1,40 @@
+*{margin: 0px;
+padding: 0px;}
+
+.poppins-regular td{
+    font-family: "Poppins", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+  }
+  .col-md-6{
+    flex:1;
+    height:100%;
+    
+  }
+  .poppins-medium {
+    font-family: "Poppins", sans-serif;
+    font-weight: 500;
+    font-style: normal;
+  }
+  
+  .poppins-semibold, small, input, p{
+    font-family: "Poppins", sans-serif;
+    font-weight: 600;
+    font-style: normal;
+    
+  }
+  
+  .poppins-bold, h1, a, h2, button, th, label{
+    font-family: "Poppins", sans-serif;
+    font-weight: 700;
+    font-style: normal;
+   
+  }
+ 
+  h1, h2, button, label, small, input, p, td, span{
+    color: #89E0E2;
+  }
+  th{
+    color: #0B5ED7;
+  }
+  
