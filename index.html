@@ -13,84 +13,90 @@
 </head>
 <body>
 <div class="container-fluid">
-<div class="row">
+<div class="row vh-100">
     <!-- Main card  -->
-        <div class="col card shadow my-2 mx-2" style="background-color:#122835;">
+        <div class="col card shadow my-2 mx-2 " style="background-color:#122835;">
   
     <!-- First Row for 1st Data!-- + Navbar Header -->
-            <div class="row shadow  mb-1" style="background-color:#000203;">
-                <div class="col d-flex">
-                <div class="d-flex justify-content-center align-items-center">
-                    <img src="Images/Logo.png" alt="Logo" style="width:120px;" class="">
-                </div>
-                <div class="d-flex m-auto mt-3 ">
-                    <h1>Oasis Contamination Matrix</h1>
-                </div>
+            <div class="row">
+                <div class="col text-center">
+                  <div class="">
+                    <div class=" justify-content-center align-items-center my-2">
+                        <img src="Images/Logo.png" alt="Logo" style="width:120px;" class="">
+                        <h2>Oasis Contamination Matrix</h2>
+                    </div>
+                  </div>
+                <!-- <div class="d-block mt-3 ">
+                    
+                </div> -->
 
                 </div>
             </div>
 
      <!-- Second Row for 2nd Data!-- -->       
             <div class="row">
-                <div class="col-xl-6 mb-1">
+                <div class="col-xl-6">
                     <div class="">
-                        <div class="card-body text-center">
-                            <h2 >Oasis Data Engine</h2>
-                            <button class="btn btn-primary" id="processDataBtn" >Process EPA Data</button>
+                        <div class="card-body text-center ">
+                          <div class ="vertical"></div>
+                            <button class="btn btn-primary mb-2" id="processDataBtn" >Process EPA Data</button>
                             <div id="processingMessage" style="display: none;">Processing. Please Wait...</div>
                             <div id="doneMessage" style="display: block;"><p>Data processed successfully! Here are your file links to download or access:</p>
-                                    <div class="mb-3">
+                                    <div class="mb-2">
                                         <a   href="/downloads/SDWA_LCR_SAMPLES.csv" target="_blank">Download SDWA_LCR_SAMPLES.csv</a>
                                         <br>
                                         <small >URL: http://82.180.137.104:3000/downloads/SDWA_LCR_SAMPLES.csv</small>
                                     </div>
                                 
-                                    <div class="mb-3">
+                                    <div class="">
                                         <a href="/downloads/SDWA_VIOLATIONS_ENFORCEMENT.csv" target="_blank">Download SDWA_VIOLATIONS_ENFORCEMENT.csv</a>
                                         <br>
                                         <small>URL: http://82.180.137.104:3000/downloads/SDWA_VIOLATIONS_ENFORCEMENT.csv</small>
                                     </div>
-                                </div>
+                                    
+                            </div>
                         </div>
+                        <hr class="horizontal">
                     </div>
 
                 </div>
-                <div class="col-xl-6 mb-1 d-flex justify-content-center align-items-center">
+                <div class="col-xl-6 d-flex justify-content-center">
                     <div class="">
-                        <div class="card-body d-flex justify-content-center align-items-center mb-2">
-                            <button id="adminAccessBtn" class="btn btn-primary my-2 py-2 mx-2" onclick="adminAccess()">Admin Access</button>
-                            <input id="inputAdmin" class="form-control my-2 w-25 mx-2 d-none" type="text" id="formFile">
-                            <button id="btnAdmin" class="btn btn-primary my-2 py-2 mx-2 d-none" onclick="submitPassword()">Submit</button>
+                        <div class="card-body d-flex justify-content-center align-items-center ">
+                            <button id="adminAccessBtn" class="btn btn-primary mx-2" onclick="adminAccess()">Admin Access</button>
+                            <input id="inputAdmin" class="form-control mx-2 d-none" style="width:100px;" type="password" id="formFile">
+                            <button id="btnAdmin" class="btn btn-primary mx-2 d-none" onclick="submitPassword()">Submit</button>
                             
                         </div>
                         <div class="d-flex justify-content-center align-items-center">
                           <p id="pTag" style="color: red;"></p>
                         </div>
-                        <hr class="my-2">
-                        <div class="row py-2">
+                        <hr class="">
+                        <div class="row">
                             <div class="col d-flex ustify-content-center align-items-center">
                                 
-                                <input id="uploadBox" class="form-control w-50 mx-1 d-none" type="file" id="formFile">
-                                <button id="uploadData" class="btn btn-primary d-none" >Upload Contamination Data</button>
-                        </div>
+                                <input id="uploadBox" class="form-control w-50 d-none" type="file" id="formFile">
+                                <button id="uploadData" class="btn btn-primary mx-2 d-none" >Upload Data</button>
+                                <button id="downloadData" class="btn btn-success d-none" >Download Data</button>
+                              </div>
                     </div>
                 </div>
             </div>
             </div>
-            <hr class="my-2 bg-light">
+            <hr class="bg-light">
      <!-- Third Row for 3rd Data!-- --> 
 <div class="row">
   
     <div class="col-xl-6 d-flex justify-content-center align-items-center">
       <div>
-        <div class="d-flex align-items-center text-center">
-            <label for="zipVal" class="m-2">Enter Zip Code</label>
-            <input id="zipVal" class="form-control my-2 w-25 mx-2" type="text" > 
-            <button class="btn btn-primary m-2" id="searchZip"> Search</button>
-            <input class="form-check-input m-2" type="checkbox" value="" id="flexCheckDefault">
+        <div class="d-flex justify-content-center align-items-center">
+            <label for="zipVal" class="">Enter Zip Code</label>
+            <input id="zipVal" class="form-control mx-2" type="text" style="width:80px;"> 
+            <button class="btn btn-primary mx-2" id="searchZip"> Search</button>
+            <input class="form-check-input mx-2" style="width:15px;" type="checkbox"  id="flexCheckDefault">
             <span>Do you want violation data</span>
         </div>
-        <div class="d-flex justify-content-center align-items-center">
+        <div class="d-flex justify-content-center align-items-center pt-3">
           <p id="errorMsg" style="color: red"></p>
         </div>
          
@@ -101,9 +107,9 @@
       </div>
        <div class="col-xl-6 d-flex justify-content-center align-items-center">
         <div class="d-flex align-items-center text-center">
-           <img src="Images/Lead&VOC.png" alt="" class="img-fluid m-2 " style="height:100px;">
-           <img src="Images/Chloramine.png" alt="" class="img-fluid d-none m-2" style="height:100px;">
-           <img src="Images/AntiScale.png" alt="" class="img-fluid m-2" style="height:100px;">
+           <img src="Images/Lead&VOC.png" alt="filterCode1" class="img-fluid mx-2 " style="height:80px;">
+           <img src="Images/Chloramine.png" alt="filterCode2" class="img-fluid mx-2" style="height:80px;">
+           <img src="Images/AntiScale.png" alt="filterCode3" class="img-fluid mx-2" style="height:80px;">
            
            
         </div>
@@ -112,13 +118,14 @@
     </div>
 
 
-    <hr class="my-2 bg-light">
+    <hr class="mb-1 bg-light">
 
 
       <!-- 4th Row for 4th Data!-- --> 
 <div class="row">
     <div class="col mb-1">
-        <div class="overflow-auto p-2" style="height: 300px;">
+      <h5 id="table1Con" class="d-none">Contamination Data:</h5>
+        <div class="overflow-auto p-2">
             <table id="table1" class="table table-bordered">
                 <!-- <thead>
                   <tr>
@@ -166,50 +173,50 @@
               </table>
 
         </div>
+        <div>
+          <h5 id="table2Vio" class="d-none">Violation Data</h5>
+
+        
+        <div class="overflow-auto">
+          
+          <table id="table2" class="table table-bordered">
+              <!-- <thead>
+                <tr>
+                  <th scope="col"> Code No.</th>
+                  <th scope="col">Desired Data</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>C-125</td>
+                  <td>Lorem ipsum dolor,Itaque sequi, minima reiciendis sit iste illum? Pariatur nos</td>
+                </tr>
+                <tr>
+                  <td >ABCD</td>
+                  <td>XYZipsum numquam aodio iure, id debitis! N</td>
+                  
+                </tr>
+                <tr>
+                  <td>OGY-78</td>
+                  <td> Loripsum numquam ribus odio iure, id debitis! Nm porro </td>
+                  
+                </tr>
+                <tr>
+                  <td>PRY-56</td>
+                  <td >Loripsum numquam ribus odio iure, id debitis! Nm porro, </td>
+                  
+                </tr>
+              </tbody> -->
+            </table>
+
+      </div>
+    </div>
     </div>
     
 
 
 </div>
-<hr class="my-3 bg-light">
- 
-     <!-- 5th Row for 5th Data!-- --> 
-     <div class="row">
-        <div class="col mb-1">
-            <div class="overflow-auto p-2" style="height: 150px;">
-                <table class="table table-bordered">
-                    <thead>
-                      <tr>
-                        <th scope="col"> Code No.</th>
-                        <th scope="col">Desired Data</th>
-                      </tr>
-                    </thead>
-                    <tbody>
-                      <tr>
-                        <td>C-125</td>
-                        <td>Lorem ipsum dolor,Itaque sequi, minima reiciendis sit iste illum? Pariatur nos</td>
-                      </tr>
-                      <tr>
-                        <td >ABCD</td>
-                        <td>XYZipsum numquam aodio iure, id debitis! N</td>
-                        
-                      </tr>
-                      <tr>
-                        <td>OGY-78</td>
-                        <td >Loripsum numquam ribus odio iure, id debitis! Nm porro, </td>
-                        
-                      </tr>
-                      <tr>
-                        <td>PRY-56</td>
-                        <td >Loripsum numquam ribus odio iure, id debitis! Nm porro, </td>
-                        
-                      </tr>
-                    </tbody>
-                  </table>
-    
-            </div>
-        </div>
-        
+
     
     
     </div>

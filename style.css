@@ -24,17 +24,33 @@ padding: 0px;}
     
   }
   
-  .poppins-bold, h1, a, h2, button, th, label{
+  .poppins-bold, h1, h5, a, h2, button, th, label{
     font-family: "Poppins", sans-serif;
     font-weight: 700;
     font-style: normal;
    
   }
  
-  h1, h2, button, label, small, input, p, td, span{
+  h1, h2, h5, button, label, small, input, p, td, span{
     color: #89E0E2;
   }
   th{
     color: #0B5ED7;
   }
+  @media only screen and (min-width: 1200px) {
+    .vertical {
+      border-left: 1px solid rgb(239, 239, 243);
+      height: 200px;
+      position:absolute;
+      left: 50%;
+    }
+    
+  }
   
+  @media only screen and (max-width: 1200px) {
+    .horizontal{
+
+      border: 1px solid rgb(239, 239, 243);
+      
+    }
+  }
