@@ -16,6 +16,7 @@ let zipCode = document.getElementById("zipVal");
 let SearchBtn= document.getElementById("searchZip");
 let table1 = document.getElementById("table1");
 let table2 = document.getElementById("table2");
+let hrTag = document.getElementById("hrTag");
 let table1Con = document.getElementById("table1Con");
 let errorMsg = document.getElementById("errorMsg");
 SearchBtn.addEventListener("click", printVal);
@@ -48,6 +49,7 @@ console.log(zipCodeVal)
         
             if(data.length>0){
                 table1Con.classList.remove("d-none");
+                hrTag.classList.remove("d-none");
                 let rows=""
                
                 rows+= "<thead>";
