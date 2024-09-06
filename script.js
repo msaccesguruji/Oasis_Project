@@ -98,7 +98,7 @@ function printVal(){
                 let imgDataArray=["LEAD & VOC Pack", "Chloramine & VOC Pack","Anti-Scale & Heavy Metals Pack","LEAD & VOC Pack", "Chloramine & VOC Pack","Chloramine & VOC Pack","Anti-Scale & Heavy Metals Pack",]
                 let uniqueImgArr=[...new Set(imgDataArray)]
                 let images= {'LEAD & VOC Pack':'Images/Lead&VOC.png',
-                            'Chloramine & VOC Pack':'Images/chloramine.png',
+                            'Chloramine & VOC Pack':'Images/Chloramine.png',
                             'Anti-Scale & Heavy Metals Pack':'Images/AntiScale.png'
                 }
                 imgDiv.innerHTML="";
