@@ -203,5 +203,5 @@ function uploadContaminationData(){
 }
 
 function zipCodeSearch(){
-
+console.log("Hello")
 }
